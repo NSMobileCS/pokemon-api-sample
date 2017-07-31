@@ -16,16 +16,19 @@ function showPokeData(pokeID){
     var apiUrl =  "http://pokeapi.co/api/v1/pokemon/" + pokeID + "/";
     $.get(  apiUrl,
             function(res){
-                var data = res;
                 $('#height').empty();
                 $('#weight').empty();
                 $('#typelist').empty();
-                $('#height').append(data['height']);
-                $('#weight').append(data['weight']);
-                var dtypes = data['types'];
+                $('#height').append(res['height']);
+                $('#weight').append(res['weight']);
+                $('#poke-name').empty();
+                $('#poke-name').append(res['name']);
+                var dtypes = res['types'];
                 for (var d in dtypes)
                 {
-                    $('#typelist').append('<li>'+dtypes[d]+'</li>');
+                    var pokeType = dtypes[d].name;
+                    console.log(pokeType);
+                    $('#typeslist').append('<li>'+pokeType.toString()+'</li>');
                 }
             },
             'json'  );
