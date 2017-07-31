@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: orangered;
+}
+
+img{
+    display: inline-block;
+    margin: 6px;
+}
+
+.btn{
+    color: green;
+    font-size: 3em;
+    margin: 22px 300px 20px 20px;
+    border: 3px outset #314159;
+    border-radius: 1px;
+    text-align: center;
+    width: 20%;
+}
+
+.container{
+    border-radius: 2rm;
+    border-style: groove;
+    border-color: #1ABD04;
+    border-width: 2px;
+    vertical-align: top;
+}
+
+.left-disp-grp{
+    display: inline-block;
+    padding: 8px; 
+    width: 55%;
+    margin: 4px auto auto 4px;
+}
+
+.rt-disp-grp{
+    width: 24%;
+    margin: 4px 4px auto auto;
+    padding: 8px;
+    display: inline-block;
+}

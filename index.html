@@ -9,26 +9,36 @@
         <title>pokemon</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' type='text/css' href='css/style.css'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <p class="browsehappy">You are using a <strong>strong</strong>, <strong>strong</strong>, <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <script>
-            function addPokeMon(){
-                for (var i = 0; i < 151; i++)
-                {
-                    var url = "http://pokeapi.co/media/img/" + i.toString() + '.png';
-                    var imgtag = "<img src='" + url + "' alt='a pokemon'>";
-                    $('body').append(imgtag);
-                }
-            }
+        <div id='pokemon' class='container left-disp-grp'>
+        </div>
+        <div class='container rt-disp-grp'>
+            <div>
+                <h1 id='poke-name'></h1>
+            <div id='imgspace'>
+            </div>
+            <div id="typeslist">
+                <h3>types</h3>
+                <ul>        
+                </ul>
+            </div>
 
-            $(document).ready(function(){
-                addPokeMon();
-            })
+            <div>
+                <h3>height</h3>
+                <p id="height"></p>
+            </div>
+            <div>
+                <h3>weight</h3>
+                <p id='weight'></p>
+            </div>
+        </div>
 
-        </script>
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
